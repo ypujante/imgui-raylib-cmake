@@ -1,9 +1,16 @@
 #include "raylib.h"
 #include "rlImGui.h"
 
+#ifdef USE_GOOGLE_ANGLE_MAC_OS
+#include "GLFW/glfw3.h"
+#endif
 
 int main()
 {
+#ifdef USE_GOOGLE_ANGLE_MAC_OS
+  glfwInitHint(GLFW_ANGLE_PLATFORM_TYPE, GLFW_ANGLE_PLATFORM_TYPE_METAL);
+#endif
+
   InitWindow(800, 450, "raylib [core] example - basic window");
 
 //  SetTargetFPS(60);
