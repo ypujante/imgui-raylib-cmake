@@ -11,6 +11,7 @@ int main()
   glfwInitHint(GLFW_ANGLE_PLATFORM_TYPE, GLFW_ANGLE_PLATFORM_TYPE_METAL);
 #endif
 
+  SetConfigFlags(FLAG_WINDOW_RESIZABLE);
   InitWindow(800, 450, "raylib [core] example - basic window");
 
 //  SetTargetFPS(60);
